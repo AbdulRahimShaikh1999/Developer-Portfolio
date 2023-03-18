@@ -16,8 +16,8 @@ function App() {
         <About />
         <Experience />
         <Tech />
-        {/* <Works /> */}
-        {/* <Feedbacks /> */}
+        <Works /> {/* experience and projects*/}
+        <Feedbacks />
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
