@@ -31,10 +31,11 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        'service_63b6yil',
+        'template_7vy4j87',
         {
           from_name: form.name,
           to_name: "JavaScript Mastery",
@@ -42,12 +43,12 @@ const Contact = () => {
           to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        'Lt2GvXGOWuTqzFo9Y'
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert("Thank you! I will get back to you as soon as possible.");
 
           setForm({
             name: "",
@@ -59,7 +60,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Something went wrong. Please send me a message at abdulshaikhr99@gmail.com");
         }
       );
   };
@@ -72,8 +73,8 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
-        {/* <p className={styles.sectionSubText}>Get in touch</p> */}
-        <h3 className={styles.sectionHeadText}>Contact</h3>
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
           ref={formRef}

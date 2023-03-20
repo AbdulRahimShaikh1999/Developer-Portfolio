@@ -35,10 +35,10 @@ const About = () => {
   return (
     <>
     <motion.div>
-      <p className={styles.sectionSubText}>
+      {/* <p className={styles.sectionSubText}>
         Introduction
-      </p>
-      <h2 className={styles.sectionHeadText}>Overview</h2>
+      </p> */}
+      <h2 className={styles.sectionHeadText}>About me</h2>
     </motion.div>
     <motion.p 
     variants={fadeIn('','',0.1,1)}
